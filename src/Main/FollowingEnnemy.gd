@@ -1,36 +1,33 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var player = null
 var move = Vector2.ZERO
-var speed = 1
+var speed = 2
 
+onready var light = get_node("../Player/Halo")
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	move = Vector2.ZERO
+
+	var dist = sqrt(pow(self.get_local_mouse_position()[0], 2) 
+				  + pow(self.get_local_mouse_position()[1], 2))
+	if dist < 50:
+		speed = 0
+	else:
+		speed = 2
 	
 	if player != null:
-		move = position.direction_to(player.position) * speed
+		move = position.direction_to(player.position)
 	else:
 		move = Vector2.ZERO
 		
 	move = move.normalized()
+	move = move * speed
 	move = move_and_collide(move)
-	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_Area2D_body_entered(body):
 	if body != self:
