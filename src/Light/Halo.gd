@@ -2,6 +2,8 @@ class_name Halo
 extends Light2D
 
 var boolean = true
+var MAX_PULSAR = 0.1
+var FREQ_PULSAR = 0.2
 
 """
 var screen_centre
@@ -18,12 +20,12 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# light
-	if energy > 1.5:
+	if energy > 1.3 + MAX_PULSAR:
 		boolean = false
-	elif energy < 0.5:
+	elif energy < 1.3 - MAX_PULSAR:
 		boolean = true
 	
-	var e = 4*delta*(max(0.25 ,0.5 - abs(energy - 1.0))+ 0.01 )
+	var e = FREQ_PULSAR*delta*(max(0.25 ,0.5 - abs(energy - 1.0))+ 0.01 )
 
 	if boolean:
 		energy += e
