@@ -24,6 +24,12 @@ func _physics_process(delta):
 	move = move.normalized()
 	move = move * speed
 	move = move_and_collide(move)
+	var collision_info  = move_and_collide(move)
+	if collision_info:
+		print(collision_info)
+		#get_tree().paused = true
+		get_tree().reload_current_scene()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
