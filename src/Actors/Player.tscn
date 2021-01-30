@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/art/player/robot_demo.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://assets/art/ui/touch_button_jump.png" type="Texture" id=7]
 [ext_resource path="res://assets/art/ui/touch_button_fire.png" type="Texture" id=8]
 [ext_resource path="res://src/Actors/Gun.gd" type="Script" id=9]
+[ext_resource path="res://assets/halo.png" type="Texture" id=10]
+[ext_resource path="res://src/Light/Halo.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "crouch"
@@ -205,7 +207,6 @@ position = Vector2( 0, -14 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 16
-frame = 16
 
 [node name="Gun" type="Position2D" parent="Sprite"]
 position = Vector2( 14, 1 )
@@ -238,6 +239,10 @@ position = Vector2( 0, -28 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 process_mode = 0
+
+[node name="Halo" type="Light2D" parent="Camera"]
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -14 )

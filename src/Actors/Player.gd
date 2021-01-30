@@ -12,16 +12,25 @@ onready var shoot_timer = $ShootAnimation
 onready var sprite = $Sprite
 onready var gun = sprite.get_node(@"Gun")
 
+onready var camera: Camera2D = $Camera
+################# HALO ##################
+onready var halo = camera.get_node("Halo")
+var screen_centre
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		halo.offset = camera.get_local_mouse_position()
+##########################################
 
 func _ready():
 	# Static types are necessary here to avoid warnings.
-	var camera: Camera2D = $Camera
 	if action_suffix == "_p1":
 		camera.custom_viewport = $"../.."
 	elif action_suffix == "_p2":
 		var viewport: Viewport = $"../../../../ViewportContainer2/Viewport"
 		viewport.world_2d = ($"../.." as Viewport).world_2d
 		camera.custom_viewport = viewport
+	screen_centre = get_viewport().get_visible_rect().size / 2
 
 
 # Physics process is a built-in loop in Godot.
