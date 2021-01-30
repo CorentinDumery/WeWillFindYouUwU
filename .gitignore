@@ -1,3 +1,4 @@
 .import*
 screenshots/*
 *.xcf
+export_presets.cfg

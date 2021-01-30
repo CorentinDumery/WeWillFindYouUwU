@@ -32,7 +32,8 @@ func _physics_process(delta):
 	
 	# We flip the Sprite depending on which way the enemy is moving.
 	if move.x > 1 or move.x < -1: 
-		$AnimatedSprite.scale.x = -1 if move.x > 0 else 1
+		pass
+		#$AnimatedSprite.scale.x = -1 if move.x > 0 else 1
 	
 	var collision_info  = move_and_collide(move)
 	if collision_info:
@@ -48,7 +49,7 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body != self:
 		player = body
-		$AnimatedSprite.play()
+		#$AnimatedSprite.play()
 
 
 func _on_Area2D_body_exited(body):
