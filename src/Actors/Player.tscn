@@ -240,6 +240,10 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 process_mode = 0
 
+[node name="Halo" type="Light2D" parent="Camera"]
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -14 )
 shape = SubResource( 11 )
@@ -279,7 +283,3 @@ scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 8 )
 action = "shoot"
 visibility_mode = 1
-
-[node name="Halo" type="Light2D" parent="."]
-texture = ExtResource( 10 )
-script = ExtResource( 11 )

@@ -14,7 +14,7 @@ onready var gun = sprite.get_node(@"Gun")
 
 onready var camera: Camera2D = $Camera
 ################# HALO ##################
-onready var halo = $Halo
+onready var halo = camera.get_node("Halo")
 var screen_centre
 
 func _input(event):
