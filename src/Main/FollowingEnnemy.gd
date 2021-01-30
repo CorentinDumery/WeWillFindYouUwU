@@ -23,7 +23,7 @@ func _physics_process(delta):
 		
 	move = move.normalized()
 	move = move * speed
-	move = move_and_collide(move)
+	
 	var collision_info  = move_and_collide(move)
 	if collision_info:
 		print(collision_info)
