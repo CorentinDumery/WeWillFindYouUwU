@@ -11,7 +11,7 @@ pause_mode = 1
 script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -1, 4 )
+position = Vector2( -2, 4 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 16
@@ -27,5 +27,4 @@ autoplay = true
 script = ExtResource( 9 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 1 )
