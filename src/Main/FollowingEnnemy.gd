@@ -10,7 +10,7 @@ var move = Vector2.ZERO
 var speed = 1
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move = Vector2.ZERO
 	
 	if player != null:
