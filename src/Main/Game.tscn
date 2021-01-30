@@ -19,6 +19,7 @@ pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="Level" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 1 )
 
 [node name="Player" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 90, 546 )
@@ -54,7 +55,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Level/following_enemy3"]
 position = Vector2( -0.056628, 0.203186 )
-scale = Vector2( 0.475289, 1.07422 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy3"]
@@ -76,7 +76,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Level/following_enemy4"]
 position = Vector2( -0.056628, 0.203186 )
-scale = Vector2( 0.475289, 1.07422 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy4"]
@@ -98,7 +97,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Level/following_enemy2"]
 position = Vector2( -0.056628, 0.203186 )
-scale = Vector2( 0.475289, 1.07422 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy2"]
