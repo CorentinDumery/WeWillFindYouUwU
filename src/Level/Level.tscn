@@ -27,5 +27,4 @@ autoplay = true
 script = ExtResource( 9 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 1 )
