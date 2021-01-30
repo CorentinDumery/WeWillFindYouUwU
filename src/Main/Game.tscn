@@ -31,8 +31,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Level/following_enemy"]
-position = Vector2( -0.0566406, 0.203186 )
-scale = Vector2( 1.02344, 1.07422 )
+position = Vector2( -0.056628, 0.203186 )
+scale = Vector2( 0.475289, 1.07422 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy"]
