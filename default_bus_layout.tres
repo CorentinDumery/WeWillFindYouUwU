@@ -4,7 +4,6 @@
 resource_name = "Reverb"
 
 [resource]
-bus/0/mute = true
 bus/0/volume_db = -2.11474
 bus/0/effect/0/effect = SubResource( 1 )
 bus/0/effect/0/enabled = false
