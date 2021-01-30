@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/UserInterface/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Main/Game.gd" type="Script" id=2]
 [ext_resource path="res://src/Level/Level.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://src/Main/FollowingEnnemy.gd" type="Script" id=6]
+
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.0
+height = 40.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 300, 40 )
 
 [node name="Game" type="Node"]
 pause_mode = 2
@@ -14,7 +24,32 @@ script = ExtResource( 2 )
 [node name="Player" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 90, 546 )
 
+[node name="following_enemy" type="KinematicBody2D" parent="Level"]
+position = Vector2( 517.828, 602.242 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Level/following_enemy"]
+position = Vector2( -0.0566406, 0.203186 )
+scale = Vector2( 1.02344, 1.07422 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy"]
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Level/following_enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy/Area2D"]
+position = Vector2( -4.57764e-05, 0.18729 )
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
 layer = 100
 
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource( 1 )]
+visible = false
+[connection signal="body_entered" from="Level/following_enemy/Area2D" to="Level/following_enemy" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level/following_enemy/Area2D" to="Level/following_enemy" method="_on_Area2D_body_exited"]
