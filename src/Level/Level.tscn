@@ -98,26 +98,6 @@ offset = Vector2( 103.613, -8.66028 )
 region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
 region_filter_clip = true
 
-[node name="BG0-1" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( -185.489, 641.713 )
-scale = Vector2( 1.47949, 1.50501 )
-z_index = -3
-texture = ExtResource( 2 )
-offset = Vector2( 103.613, -8.66028 )
-region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
-region_filter_clip = true
-
-[node name="BG0-2" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 571.581, 641.702 )
-scale = Vector2( 1.47949, 1.50501 )
-z_index = -3
-texture = ExtResource( 2 )
-offset = Vector2( 103.613, -8.66028 )
-region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
-region_filter_clip = true
-
 [node name="plainwall" type="Sprite" parent="."]
 position = Vector2( 212.04, 495.017 )
 scale = Vector2( 1.5587, 1.63549 )
