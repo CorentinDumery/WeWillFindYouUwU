@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/art/tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/art/background/background.png" type="Texture" id=2]
@@ -7,7 +7,12 @@
 [ext_resource path="res://src/Level/Level.gd" type="Script" id=5]
 [ext_resource path="res://assets/art/background/black.jpeg" type="Texture" id=6]
 [ext_resource path="res://src/Level/ParallaxBackground.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/art/background/key.png" type="Texture" id=8]
 [ext_resource path="res://src/Level/Music.gd" type="Script" id=9]
+[ext_resource path="res://src/Level/key.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.1671, 11.6479 )
 
 [node name="Level" type="Node2D"]
 pause_mode = 1
@@ -41,7 +46,7 @@ bus = "Background music"
 script = ExtResource( 9 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.992157, 0.992157, 0.992157, 1 )
 
 [node name="BG2-1" type="Sprite" parent="."]
 show_behind_parent = true
@@ -159,3 +164,18 @@ position = Vector2( -604.795, 243.146 )
 scale = Vector2( 3.95012, 6.8555 )
 z_index = 82
 texture = ExtResource( 6 )
+
+[node name="key" type="Sprite" parent="."]
+position = Vector2( 127.822, -416.238 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 8 )
+script = ExtResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="key"]
+position = Vector2( -2556.44, 8324.76 )
+scale = Vector2( 20, 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/Area2D"]
+position = Vector2( 129.104, -415.453 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="key/Area2D" to="key" method="_on_Area2D_body_entered"]
