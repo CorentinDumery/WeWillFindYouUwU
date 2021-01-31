@@ -41,7 +41,6 @@ region_rect = Rect2( 0, 0, 1000, 1000 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -20.0
-autoplay = true
 bus = "Background music"
 script = ExtResource( 9 )
 
@@ -91,6 +90,26 @@ region_filter_clip = true
 [node name="BG1-2" type="Sprite" parent="."]
 show_behind_parent = true
 position = Vector2( 723.269, 513.688 )
+scale = Vector2( 1.47949, 1.50501 )
+z_index = -3
+texture = ExtResource( 2 )
+offset = Vector2( 103.613, -8.66028 )
+region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
+region_filter_clip = true
+
+[node name="BG0-1" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -185.489, 641.713 )
+scale = Vector2( 1.47949, 1.50501 )
+z_index = -3
+texture = ExtResource( 2 )
+offset = Vector2( 103.613, -8.66028 )
+region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
+region_filter_clip = true
+
+[node name="BG0-2" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 571.581, 641.702 )
 scale = Vector2( 1.47949, 1.50501 )
 z_index = -3
 texture = ExtResource( 2 )
