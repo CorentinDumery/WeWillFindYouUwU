@@ -6,13 +6,7 @@ var speed = 2
 
 var time = 0
 
-onready var light = get_node("../Player/Halo")
-
-
-
 onready var sprite = $Sprite
-onready var animation_player = $HungrySprite
-
 
 func _physics_process(delta):
 	move = Vector2.ZERO
@@ -42,7 +36,7 @@ func _physics_process(delta):
 	time += 1
 	var collision_info  = move_and_collide(move)
 	if collision_info:
-		print(collision_info)
+		#print(collision_info)
 		#get_tree().paused = true
 		get_tree().reload_current_scene()
 	
@@ -52,11 +46,13 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Area2D_body_entered(body):
-	if body != self:
+	if body is Player:
 		player = body
+		$ooo.play()
 		#$AnimatedSprite.play()
 
 
 func _on_Area2D_body_exited(body):
 	if body != self:
 		player = null
+		$ooo.stop()
