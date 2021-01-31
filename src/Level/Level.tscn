@@ -46,7 +46,7 @@ bus = "Background music"
 script = ExtResource( 9 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.992157, 0.992157, 0.992157, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="BG2-1" type="Sprite" parent="."]
 show_behind_parent = true
@@ -99,7 +99,6 @@ region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
 region_filter_clip = true
 
 [node name="BG0-1" type="Sprite" parent="."]
-visible = false
 show_behind_parent = true
 position = Vector2( -185.489, 641.713 )
 scale = Vector2( 1.47949, 1.50501 )
@@ -110,7 +109,6 @@ region_rect = Rect2( 13.4773, 3.4184, 226.808, 118.251 )
 region_filter_clip = true
 
 [node name="BG0-2" type="Sprite" parent="."]
-visible = false
 show_behind_parent = true
 position = Vector2( 571.581, 641.702 )
 scale = Vector2( 1.47949, 1.50501 )

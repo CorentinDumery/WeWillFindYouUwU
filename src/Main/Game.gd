@@ -6,6 +6,10 @@ extends Node
 # The "_" prefix is a convention to indicate that variables are private,
 # that is to say, another node or script should not access them.
 onready var _pause_menu = $InterfaceLayer/PauseMenu
+onready var _death_menu = $InterfaceLayer/DeathMenu
+onready var _dark_canvas = $Level1/CanvasModulate
+
+var dead = false
 
 
 func _init():
@@ -29,7 +33,7 @@ func _unhandled_input(event):
 	# when the game is paused, so this code keeps running.
 	# To see that, select GlobalControls, and scroll down to the Pause category
 	# in the inspector.
-	elif event.is_action_pressed("toggle_pause"):
+	elif event.is_action_pressed("toggle_pause") and not dead:
 		var tree = get_tree()
 		tree.paused = not tree.paused
 		if tree.paused:
@@ -48,3 +52,20 @@ func _unhandled_input(event):
 		else:
 			# warning-ignore:return_value_discarded
 			get_tree().change_scene("res://src/Main/Splitscreen.tscn")
+	
+	# restart the game uwu
+	elif event.is_action_pressed("restart"):
+		if not _pause_menu.visible:
+			_death_menu.close()
+			var _r = get_tree().reload_current_scene()
+
+func _ready():
+	if get_tree().paused == true:
+		get_tree().paused = false
+
+func toggle_death():
+	dead = true
+	_death_menu.open()
+	_dark_canvas.hide()
+	get_tree().paused = true
+	print("The player died.")

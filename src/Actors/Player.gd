@@ -10,7 +10,6 @@ onready var platform_detector = $PlatformDetector
 onready var animation_player = $AnimationPlayer
 onready var shoot_timer = $ShootAnimation
 onready var sprite = $Sprite
-onready var gun = sprite.get_node(@"Gun")
 
 onready var camera: Camera2D = $Camera
 ################# HALO ##################

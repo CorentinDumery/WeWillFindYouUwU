@@ -38,8 +38,8 @@ func _physics_process(delta):
 	if collision_info:
 		#print(collision_info)
 		#get_tree().paused = true
-		get_tree().reload_current_scene()
-	
+		#get_tree().reload_current_scene()
+		get_node("../..").toggle_death()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

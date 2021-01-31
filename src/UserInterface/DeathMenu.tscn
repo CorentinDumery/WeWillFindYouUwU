@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/theme/fonts/open.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/UserInterface/DeathMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 6.0
@@ -63,8 +64,9 @@ border_width_bottom = 1
 border_color = Color( 0.41, 0.61, 0.91, 1 )
 
 [sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 2 )
 
-[resource]
+[sub_resource type="Theme" id=7]
 default_font = SubResource( 6 )
 Button/colors/font_color = Color( 0.8, 0.8075, 0.8275, 1 )
 Button/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
@@ -73,9 +75,59 @@ Button/colors/font_color_pressed = Color( 0.41, 0.61, 0.91, 1 )
 Button/colors/icon_color_hover = Color( 1.15, 1.15, 1.15, 1 )
 Button/colors/icon_color_pressed = Color( 0.4715, 0.7015, 1.0465, 1 )
 Button/constants/hseparation = 2
-Button/fonts/font = ExtResource( 1 )
+Button/fonts/font = null
 Button/styles/disabled = SubResource( 1 )
 Button/styles/focus = SubResource( 2 )
 Button/styles/hover = SubResource( 3 )
 Button/styles/normal = SubResource( 4 )
 Button/styles/pressed = SubResource( 5 )
+
+[node name="DeathMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 7 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.211765 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -125.0
+margin_right = 87.0
+margin_bottom = 126.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 100.0
+margin_right = 174.0
+margin_bottom = 123.0
+text = "U ded ÒwÓ <3"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 127.0
+margin_right = 174.0
+margin_bottom = 150.0
+text = "press R to restart"
+align = 1
