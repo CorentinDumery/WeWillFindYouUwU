@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	print("you win")
+	get_node("../..").toggle_win()

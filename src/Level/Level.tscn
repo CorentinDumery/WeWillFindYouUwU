@@ -46,6 +46,7 @@ bus = "Background music"
 script = ExtResource( 9 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="BG2-1" type="Sprite" parent="."]
@@ -144,7 +145,7 @@ z_index = 82
 texture = ExtResource( 6 )
 
 [node name="key" type="Sprite" parent="."]
-position = Vector2( 127.822, -416.238 )
+position = Vector2( 129.742, -396.973 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 8 )
 script = ExtResource( 10 )

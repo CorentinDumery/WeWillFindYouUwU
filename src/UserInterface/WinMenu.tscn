@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/UserInterface/DeathMenu.gd" type="Script" id=1]
-[ext_resource path="res://assets/theme/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/theme/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/UserInterface/WinMenu.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 6.0
@@ -64,7 +64,7 @@ border_width_bottom = 1
 border_color = Color( 0.41, 0.61, 0.91, 1 )
 
 [sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="Theme" id=7]
 default_font = SubResource( 6 )
@@ -82,30 +82,22 @@ Button/styles/hover = SubResource( 3 )
 Button/styles/normal = SubResource( 4 )
 Button/styles/pressed = SubResource( 5 )
 
-[node name="DeathMenu" type="Control"]
+[node name="WinMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 7 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.992157, 0.992157, 0.992157, 0 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 307.0
-margin_top = 93.0
-margin_right = 490.0
-margin_bottom = 164.0
-color = Color( 0, 0, 0, 0.780392 )
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 295.0
+margin_top = 105.0
+margin_right = 525.0
+margin_bottom = 149.0
+color = Color( 0.407843, 0.364706, 0.105882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -126,18 +118,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 12.0
-margin_right = 174.0
-margin_bottom = 35.0
-text = "U ded ÒwÓ <3"
-align = 1
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 39.0
-margin_right = 174.0
-margin_bottom = 62.0
-text = "press R to restart"
-align = 1
+margin_top = 25.0
+margin_right = 198.0
+margin_bottom = 48.0
+text = "<3 YOU WON !!!1!11!11 <3"
