@@ -4,7 +4,12 @@
 resource_name = "Reverb"
 
 [resource]
-bus/0/mute = true
-bus/0/volume_db = -14.6228
+bus/0/volume_db = 0.0672607
 bus/0/effect/0/effect = SubResource( 1 )
 bus/0/effect/0/enabled = false
+bus/1/name = "Background music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 1.65377
+bus/1/send = "Master"

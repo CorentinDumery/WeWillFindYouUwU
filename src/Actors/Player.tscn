@@ -242,7 +242,6 @@ process_mode = 0
 
 [node name="Halo" type="Light2D" parent="Camera"]
 texture = ExtResource( 10 )
-energy = 1.3
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
