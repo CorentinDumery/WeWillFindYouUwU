@@ -18,93 +18,156 @@ extents = Vector2( 300, 40 )
 pause_mode = 2
 script = ExtResource( 2 )
 
-[node name="Level" parent="." instance=ExtResource( 3 )]
+[node name="Level1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1, 2 )
 
-[node name="Player" parent="Level" instance=ExtResource( 4 )]
+[node name="Player" parent="Level1" instance=ExtResource( 4 )]
 position = Vector2( 90, 546 )
 
-[node name="following_enemy" type="KinematicBody2D" parent="Level"]
-position = Vector2( 529.142, 255.76 )
+[node name="following_enemy" type="KinematicBody2D" parent="Level1"]
+position = Vector2( 822.81, 266.248 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Level/following_enemy"]
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy"]
 position = Vector2( 0.943359, 0.203186 )
 scale = Vector2( 1.02344, 1.07422 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy"]
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="Level/following_enemy"]
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy/Area2D"]
 position = Vector2( -4.57764e-05, 0.18729 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 
-[node name="following_enemy3" type="KinematicBody2D" parent="Level"]
+[node name="following_enemy3" type="KinematicBody2D" parent="Level1"]
 position = Vector2( -127.053, 380.211 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Level/following_enemy3"]
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy3"]
 position = Vector2( -0.056628, 0.203186 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy3"]
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="Level/following_enemy3"]
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy3/Area2D"]
 position = Vector2( -4.57764e-05, 0.18729 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 
-[node name="following_enemy4" type="KinematicBody2D" parent="Level"]
+[node name="following_enemy4" type="KinematicBody2D" parent="Level1"]
 position = Vector2( 829.955, 119.995 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Level/following_enemy4"]
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy4"]
 position = Vector2( -0.056628, 0.203186 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy4"]
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="Level/following_enemy4"]
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy4"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy4/Area2D"]
 position = Vector2( -4.57764e-05, 0.18729 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 
-[node name="following_enemy2" type="KinematicBody2D" parent="Level"]
+[node name="following_enemy2" type="KinematicBody2D" parent="Level1"]
 position = Vector2( 825.216, 503.843 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Level/following_enemy2"]
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy2"]
 position = Vector2( -0.056628, 0.203186 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy2"]
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="Level/following_enemy2"]
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/following_enemy2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy2/Area2D"]
+position = Vector2( -4.57764e-05, 0.18729 )
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+
+[node name="following_enemy5" type="KinematicBody2D" parent="Level1"]
+position = Vector2( 52.0894, 136.758 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy5"]
+position = Vector2( -0.056628, 0.203186 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy5"]
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy5/Area2D"]
+position = Vector2( -4.57764e-05, 0.18729 )
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+
+[node name="following_enemy6" type="KinematicBody2D" parent="Level1"]
+position = Vector2( -269.359, 229.621 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy6"]
+position = Vector2( -0.056628, 0.203186 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy6"]
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy6/Area2D"]
+position = Vector2( -4.57764e-05, 0.18729 )
+shape = SubResource( 2 )
+one_way_collision_margin = 0.0
+
+[node name="following_enemy7" type="KinematicBody2D" parent="Level1"]
+position = Vector2( -198.644, 520.338 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Level1/following_enemy7"]
+position = Vector2( -0.056628, 0.203186 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy7"]
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Level1/following_enemy7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/following_enemy7/Area2D"]
 position = Vector2( -4.57764e-05, 0.18729 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
@@ -114,11 +177,20 @@ layer = 100
 
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource( 1 )]
 visible = false
-[connection signal="body_entered" from="Level/following_enemy/Area2D" to="Level/following_enemy" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Level/following_enemy/Area2D" to="Level/following_enemy" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Level/following_enemy3/Area2D" to="Level/following_enemy3" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Level/following_enemy3/Area2D" to="Level/following_enemy3" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Level/following_enemy4/Area2D" to="Level/following_enemy4" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Level/following_enemy4/Area2D" to="Level/following_enemy4" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Level/following_enemy2/Area2D" to="Level/following_enemy2" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Level/following_enemy2/Area2D" to="Level/following_enemy2" method="_on_Area2D_body_exited"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 518.849, 1235.35 )
+[connection signal="body_entered" from="Level1/following_enemy/Area2D" to="Level1/following_enemy" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy/Area2D" to="Level1/following_enemy" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy3/Area2D" to="Level1/following_enemy3" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy3/Area2D" to="Level1/following_enemy3" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy4/Area2D" to="Level1/following_enemy4" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy4/Area2D" to="Level1/following_enemy4" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy2/Area2D" to="Level1/following_enemy2" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy2/Area2D" to="Level1/following_enemy2" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy5/Area2D" to="Level1/following_enemy5" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy5/Area2D" to="Level1/following_enemy5" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy6/Area2D" to="Level1/following_enemy6" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy6/Area2D" to="Level1/following_enemy6" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Level1/following_enemy7/Area2D" to="Level1/following_enemy7" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Level1/following_enemy7/Area2D" to="Level1/following_enemy7" method="_on_Area2D_body_exited"]
