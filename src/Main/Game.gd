@@ -7,6 +7,7 @@ extends Node
 # that is to say, another node or script should not access them.
 onready var _pause_menu = $InterfaceLayer/PauseMenu
 onready var _death_menu = $InterfaceLayer/DeathMenu
+onready var _win_menu = $InterfaceLayer/WinMenu
 onready var _dark_canvas = $Level1/CanvasModulate
 
 var dead = false
@@ -69,3 +70,8 @@ func toggle_death():
 	_dark_canvas.hide()
 	get_tree().paused = true
 	print("The player died.")
+
+func toggle_win():
+	_win_menu.open()
+	_dark_canvas.hide()
+	print("The player won.")

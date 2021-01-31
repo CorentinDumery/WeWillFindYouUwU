@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/theme/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/UserInterface/WinMenu.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.18, 0.207, 0.279, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.14, 0.161, 0.217, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.41, 0.61, 0.91, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.4, 0.4225, 0.4825, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.125, 0.14375, 0.19375, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.41, 0.61, 0.91, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=7]
+default_font = SubResource( 6 )
+Button/colors/font_color = Color( 0.8, 0.8075, 0.8275, 1 )
+Button/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
+Button/colors/font_color_hover = Color( 0.88, 0.8845, 0.8965, 1 )
+Button/colors/font_color_pressed = Color( 0.41, 0.61, 0.91, 1 )
+Button/colors/icon_color_hover = Color( 1.15, 1.15, 1.15, 1 )
+Button/colors/icon_color_pressed = Color( 0.4715, 0.7015, 1.0465, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
+
+[node name="WinMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 7 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 295.0
+margin_top = 105.0
+margin_right = 525.0
+margin_bottom = 149.0
+color = Color( 0.407843, 0.364706, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -149.0
+margin_right = 87.0
+margin_bottom = -75.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 25.0
+margin_right = 198.0
+margin_bottom = 48.0
+text = "<3 YOU WON !!!1!11!11 <3"
