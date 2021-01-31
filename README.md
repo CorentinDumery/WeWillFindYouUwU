@@ -26,8 +26,8 @@ Esc : Pause
 ## Music
 
 Original soundtrack by Benoit Ranucci ! Check this out:
-* [Spooky Game track](https://raw.githubusercontent.com/CorentinDumery/WeWillFindYouUwU/main/assets/audio/music/Game1.ogg)
-* [Scary Menu track](https://raw.githubusercontent.com/CorentinDumery/WeWillFindYouUwU/main/assets/audio/music/Menu1.ogg)
+* [Spooky Game track](https://github.com/CorentinDumery/WeWillFindYouUwU/blob/main/assets/audio/music/Game1.ogg)
+* [Scary Menu track](https://github.com/CorentinDumery/WeWillFindYouUwU/blob/main/assets/audio/music/Menu1.ogg)
 
 ## Global Game Jam 2021
 
