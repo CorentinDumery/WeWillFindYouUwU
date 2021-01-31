@@ -36,10 +36,8 @@ func _physics_process(delta):
 	time += 1
 	var collision_info  = move_and_collide(move)
 	if collision_info:
-		#print(collision_info)
-		#get_tree().paused = true
-		#get_tree().reload_current_scene()
-		get_node("../..").toggle_death()
+		if collision_info.collider.name == "Player":
+			get_node("../..").toggle_death()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
