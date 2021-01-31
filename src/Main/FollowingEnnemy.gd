@@ -4,6 +4,8 @@ var player = null
 var move = Vector2.ZERO
 var speed = 2
 
+var time = 0
+
 onready var light = get_node("../Player/Halo")
 
 
@@ -35,6 +37,9 @@ func _physics_process(delta):
 		pass
 		#$AnimatedSprite.scale.x = -1 if move.x > 0 else 1
 	
+	self.scale.x *= 1 + sin(time/20)/600
+	self.scale.y *= 1 + sin(time/20)/600
+	time += 1
 	var collision_info  = move_and_collide(move)
 	if collision_info:
 		print(collision_info)
