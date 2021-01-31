@@ -24,7 +24,6 @@ tile_data = PoolIntArray( -131082, 7, 0, -131081, 3, 0, -196581, 536870915, 0, -
 [node name="ParallaxBackground" parent="." instance=ExtResource( 7 )]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 316.329, 311.572 )
